@@ -9,5 +9,7 @@ IoT Core uses MQTT over mTLS for safe communication. MFA (Multi factor Authntica
 Scalability
 You can easily add and delete devices to fit you needs. If you want to go beyond hobbyist level AWS supports JITP (just-in-time provisioning) as well as JITR (just-in-time registartion).
 
+Follow this link: "https://github.com/Ameleas/amplify-vite-react-template.git" to see the second part on this project where I used AWS Amplify to create a frontend webpage.
+
 
 
