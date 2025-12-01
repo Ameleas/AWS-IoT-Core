@@ -1,0 +1,12 @@
+{
+  "state": {
+    "desired": {
+      "welcome": "aws-iot",
+      "sendIntervalSeconds": 60
+    },
+    "reported": {
+      "welcome": "aws-iot",
+      "sendIntervalSeconds": 60
+    }
+  }
+}
