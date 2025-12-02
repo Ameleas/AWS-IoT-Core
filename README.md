@@ -47,10 +47,15 @@ Device Shadows
 ---------------------------------------
 
 This project also uses an AWS IoT Device Shadow, which provides a persistent, cloud-stored JSON document representing the device’s desired and reported state.
-In this implementation, the device shadow is used to update how frequently the ESP32 sends sensor data.
+In this implementation, the device shadow is used to update how frequently the ESP32 sends sensor data. But it can be used for anything else as well.
 
-When the desired state in the shadow changes (for example, a new reporting interval), the ESP32 receives an update, applies the new setting, and reports back its reported state.
-This ensures the device and the cloud always stay synchronized—even if the device temporarily goes offline.
+When the desired state in the shadow changes (for example, a new reporting interval), the ESP32 receives an update, applies the new setting, and reports back its reported state. This ensures the device and the cloud always stay synchronized—even if the device temporarily goes offline.
+
+
+Saving data
+---------------------------------------
+In this project I have used DynamoDB for hot storage and S3 for cold storage data. It is easy to cónnect to dynamoDB, you just search for it in you account in AWS.
+After creating a table in DynamoDB you need to create a Rule in Message Routing in IoT Core that points to it. You also have to create an I Am role. Similarly you can create a bucket for long time storage in S3. Advances with DynamoBD is it is quick and direct access, drawback it is only saved for limited time. If you want to save data over long time, say 10 years, S3 is a bether choise.
 
 Security
 ---------------------------------------
